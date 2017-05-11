@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>AlbumX</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<!--  This is the part where albums and variables get added to table -->
+	<h1>Add Album</h1>
+	<div>
+		<form th:object="${album}" th:action="@{save}" action="#" method="post">
+		  	<label for="arname">Artist Name</label>
+			<input type="text" id="arname" th:field="*{artistName}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+		  	<label for="alname">Album Name</label>
+			<input type="text" id="alname" th:field="*{albumName}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+		  	<label for="yreleased">Year Released</label>
+			<input type="text" th:field="*{yearReleased}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<label for="rating">Rating</label>
+			<input type="text" id="rating" th:field="*{rating}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<input type="submit" value="Save"></input>
+		</form>
+		
+		<a href="/start"><button>Cancel</button></a>
+	</div>
+</body>
+</html>

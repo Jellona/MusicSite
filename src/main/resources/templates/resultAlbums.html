@@ -1,0 +1,19 @@
+<!-- The html page for showing results after submitting an album -->
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Music Site</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Result</h1>
+    <p th:text="'Artist name: ' + ${album.artistName}" />
+    <p th:text="'Album name: ' + ${album.albumName}" />
+    <p th:text="'Year released: ' + ${album.yearReleased}" />
+    <p th:text="'Rating: ' + ${album.rating}" />
+        
+    <a href="/hello"><button>Submit another artist</button></a>
+    <a href="/start"><button>Back to front page</button></a>
+</body>
+</html>

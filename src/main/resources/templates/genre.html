@@ -1,0 +1,31 @@
+<!--  Alternative search and adding method, not fully implemented but works -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> 
+	<head>
+		<title>Music Site</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+	
+	<body>
+		<h1>Genre</h1>
+    	<table>
+			<tr>
+		    	<th>Artist Name</th>
+		    	<th>Album Name</th>
+		    	<th>Year Released</th>
+		    	<th>Rating</th>
+			</tr>  
+    		<tr th:each = "album : ${albums}">
+    			<td th:text="${album.artistName}"></td>
+    			<td th:text="${album.albumName}"></td>
+    			<td th:text="${album.yearReleased}"></td>
+    			<td th:text="${album.rating}"></td>
+    		</tr>
+     	</table>
+		
+		
+		<a href="/start"><button>Back to front page</button></a>
+    
+	</body>
+</html>

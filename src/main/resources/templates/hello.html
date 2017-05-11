@@ -1,0 +1,49 @@
+<!--  The html site for submitting artist into the genres -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> 
+	<head>
+		<title>Music Site</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+	</head>
+	
+	<body>
+		<h1>The Music Site!</h1>
+		
+		<h1>Form</h1>
+    <form action="#" th:action="@{/hello}" th:object="${message}" method="post">
+    	<table>
+    	<tr>
+    		<td>Artist name: <input type="text" th:field="*{artistName}" /></td>
+        </tr>
+        <tr>
+        	<td>Album name: <input type="text" th:field="*{albumName}" /></td>
+        </tr>
+        <tr>
+        	<td>Year released: <input type="text" th:field="*{yearReleased}" /></td>
+        </tr>
+        <tr>
+        	<td>Rating (1-10): <input type="text" th:field="*{rating}" /></td>
+        </tr>
+        </table>
+        
+        <p> Genre: 
+        	<select> 
+        		<option value="Metal">Rock</option>
+        		<option value="Metal">Metal</option>
+        		<option value="Classical">Classical</option>
+        		<option value="Rap">Rap</option>
+        		<option value="Pop">Pop</option>
+        	</select>
+        </p>
+        <p>
+        	<input type="submit" value="Add album" />
+        </p>
+        
+        
+    </form>
+    <a href="/start"><button>Cancel</button></a>
+    
+	</body>
+</html>

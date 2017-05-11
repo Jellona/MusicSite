@@ -1,0 +1,38 @@
+<!-- The first page user enters, displays genres and option to add albums -->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+ 
+	<head>
+		<title>Music Site</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+	</head>
+	
+	<body>
+
+		<h1 th:inline="text">Welcome to Music Madness [[${#httpServletRequest.remoteUser}]]!</h1>
+		
+		<p>Greetings traveller, you stand before a vast online list of multiple different music genres, albums and artist. They are gathered here so that you and others like you can easily find enjoyable music to listen to.
+		</p>
+		
+		<!-- 
+		<a href="/hello"><button>Submit an artist</button></a>
+		-->
+		<ol>
+			<!--  All of the different genres implemented on site -->
+			<li><a href="/rock">View Rock Music</a></li>
+			<li><a href="/metal">View Metal Music</a></li>
+			<li><a href="/classical">View Classical Music</a></li>
+			<li><a href="/rap">View Rap Music</a></li>
+			<li><a href="/pop">View Pop Music</a></li>
+		</ol>
+		
+    	<a href="/rest"><button>Guide for REST</button></a>
+    	
+    	<form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+	</body>
+</html>
